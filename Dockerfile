@@ -19,4 +19,6 @@ RUN cd /work && \
     ln -s $(pwd)/nsenter-2015-07-28 /usr/bin/nsenter && \
     ln -s $(pwd)/blockade-wrap      /usr/bin/
 
+WORKDIR /blockade
+
 ENTRYPOINT ["blockade-wrap"]
