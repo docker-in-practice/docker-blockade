@@ -20,5 +20,4 @@ RUN cd /work && \
     ln -s $(pwd)/blockade-wrap      /usr/bin/
 
 WORKDIR /blockade
-
-ENTRYPOINT ["blockade-wrap"]
+ENTRYPOINT ["nsenter", "--target", "1", "--net", "blockade"]
